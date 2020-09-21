@@ -113,9 +113,15 @@ export class MainPageComponent implements OnInit {
   }
 
   bankServicesData(){
+<<<<<<< HEAD
     let getData =  this.bankService.getBankServiceData();
     if(getData && getData != null && getData !== "undefined"){
       this.bankData = getData;
+=======
+    let data = this.bankService.getBankServiceData();;
+    if(data && data!=null && typeof(data) !== "undefined"){
+      this.bankData =  data;
+>>>>>>> running_branch
     }
   }
 
