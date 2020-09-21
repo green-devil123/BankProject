@@ -1,0 +1,135 @@
+<div class="container">
+    <div *ngIf="!submitForm;then thenBlock else elseBlock"></div>
+    <ng-template #thenBlock>
+        <div class="row mr-0 mb-5">
+                <div class="col col-md-12">
+                    <h4 class="text-center">BANK OF CEYLON HEAD OFFICE IFSC AND MICR CODE FINDER</h4>
+                </div>
+        </div>
+        <form [formGroup]="validations_form"  (ngSubmit)="submit($event, validations_form.value)">
+            <div class="row mr-0 mb-5 form-group">
+                <div class="col col-md-3 offset-md-3">
+                    <label class="col-form-label">Select your bank</label>
+                </div>
+                <div class="col col-md-4 offset-md-1">
+                    <select class="w-50 form-control" (change)="onSelectBank($event.target.value)" formControlName="bankName">
+                        <option value="undefined">Select Bank</option>
+                        <option *ngFor="let bank of banks" [Value]="bank">{{bank}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mr-0 mb-5 form-group">
+                <div class="col col-md-3  offset-md-3">
+                    <label class="col-form-label">State in which bank is situated</label>
+                </div>
+                <div class="col col-md-4 offset-md-1">
+                    <select class="w-50 form-control" (change)="onSelectState($event.target.value)" formControlName="stateName">
+                        <option value="undefined">Select State</option>
+                        <option *ngFor="let state of states" [Value]="state">{{state}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mr-0 mb-5 form-group">
+                <div class="col col-md-3  offset-md-3">
+                    <label class="col-form-label">District in which bank is situated</label>
+                </div>
+                <div class="col col-md-4 offset-md-1">
+                    <select class="w-50 form-control" (change)="onSelectDistrict($event.target.value)" formControlName="districtName">
+                        <option value="undefined">Select District</option>
+                        <option *ngFor="let district of districts" [Value]="district">{{district}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mr-0 mb-5 form-group">
+                <div class="col col-md-3  offset-md-3">
+                    <label class="col-form-label">Branch of Bank within District</label>
+                </div>
+                <div class="col col-md-4 offset-md-1">
+                    <select class="w-50 form-control" formControlName="branchName">
+                        <option value="undefined">Select Branch</option>
+                        <option *ngFor="let branch of branchs" [Value]="branch">{{branch}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mr-0 mb-5 form-group">
+                <div class="col col-md-12 text-center">
+                    <button type="submit" class="btn btn-dark">Find Now</button>
+                </div>
+            </div>
+        </form>
+    </ng-template>
+    <ng-template #elseBlock>
+        <div class="row mr-0 mb-5">
+            <div class="col col-md-12">
+                <button type="button"  class="btn btn-dark" (click)=back()> &lt;&lt;Back </button>
+                <h4 class="text-center">IFSC Code For AIRTEL PAYMENTS BANK LIMITED GURGOAN - HARYANA</h4>
+            </div>
+        </div>
+        <div class="row mr-0 mb-5">
+            <div class="col col-md-3 offset-md-3">
+                <p>IFSC</p>
+            </div>
+            <div class="col col-md-4 offset-md-1">
+                <p *ngIf="result && result.ifscCode && result.ifscCode != undefined">
+                    {{result.ifscCode}}
+                </p>
+            </div>
+        </div>
+        <!-- <div class="row mr-0 mb-5">
+            <div class="col col-md-3 offset-md-3">
+                <p>MICR Code</p>
+            </div>
+            <div class="col col-md-4 offset-md-1">
+                <p *ngIf="result && result.micr && result.micr != undefined"> {{result.micr}}</p>
+            </div>
+        </div> -->
+        <div class="row mr-0 mb-5">
+            <div class="col col-md-3 offset-md-3">
+                <p>Bank</p>
+            </div>
+            <div class="col col-md-4 offset-md-1">
+                <p *ngIf="result && result.bank && result.bank != undefined">{{result.bank}}</p>
+            </div>
+        </div>
+        <!-- <div class="row mr-0 mb-5">
+            <div class="col col-md-3 offset-md-3">
+                <p>Address</p>
+            </div>
+            <div class="col col-md-4 offset-md-1">
+                <p *ngIf="result && result.address && result.address != undefined">{{result.address}}</p>
+            </div>
+        </div> -->
+        <div class="row mr-0 mb-5">
+            <div class="col col-md-3 offset-md-3">
+                <p>District</p>
+            </div>
+            <div class="col col-md-4 offset-md-1">
+                <p *ngIf="result && result.district && result.district != undefined">{{result.district}}</p>
+            </div>
+        </div>
+        <div class="row mr-0 mb-5">
+            <div class="col col-md-3 offset-md-3">
+                <p>State</p>
+            </div>
+            <div class="col col-md-4 offset-md-1">
+                <p *ngIf="result && result.state && result.state != undefined">{{result.state}}</p>
+            </div>
+        </div>
+        <div class="row mr-0 mb-5">
+            <div class="col col-md-3 offset-md-3">
+                <p>Branch</p>
+            </div>
+            <div class="col col-md-4 offset-md-1">
+                <p *ngIf="result && result.branchName && result.branchName != undefined">{{result.branchName}}</p>
+            </div>
+        </div>
+        <!-- <div class="row mr-0 mb-5">
+            <div class="col col-md-3 offset-md-3">
+                <p>Phone number</p>
+            </div>
+            <div class="col col-md-4 offset-md-1">
+                <p *ngIf="result && result.phNo && result.phNo != undefined">{{result.phNo}}</p>
+            </div>
+        </div> -->
+    </ng-template>
+</div>

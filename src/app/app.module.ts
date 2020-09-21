@@ -11,6 +11,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { GuardService } from './services/guards/guard.service';
 import { LeftSideBarComponent } from './components/left-side-bar/left-side-bar.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
+import { IfscPageComponent } from './components/ifsc-page/ifsc-page.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MainPageComponent } from './components/main-page/main-page.component';
     LoginComponent,
     HomeComponent,
     LeftSideBarComponent,
-    MainPageComponent
+    MainPageComponent,
+    IfscPageComponent
   ],
   imports: [
     BrowserModule,

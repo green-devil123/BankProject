@@ -9,13 +9,24 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   userName:string;
-
+  airStatus:boolean = true;
+  ifscStatus:boolean = false;
   constructor(public loginService:LoginService, private router: Router) { }
 
   logout(){
     this.loginService.logout();
     this.router.navigate(['/']);
     return false;
+  }
+
+  route(str){
+    if(str == 'air'){
+      this.airStatus = true;
+      this.ifscStatus = false;
+    }else{
+      this.airStatus = false;
+      this.ifscStatus = true;
+    }
   }
   
   ngOnInit(): void {

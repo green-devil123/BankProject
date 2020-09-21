@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
           return self.loginForm.value && self.loginForm.value.userName === user.userName || self.loginForm.value.userName === user.email && self.loginForm.value.password === user.password;
         }
         if(data.User.some(checkUser)){
-          var result = data.User.filter(obj => {
+          const result = data.User.filter(obj => {
             return self.loginForm.value.userName === obj.userName || self.loginForm.value.userName === obj.email && self.loginForm.value.password === obj.password;
           })
           const user = {

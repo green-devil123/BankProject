@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { BankService } from 'src/app/services/bank.service';
 declare var $: any;
 
@@ -38,7 +37,6 @@ export class MainPageComponent implements OnInit {
   };
   constructor(
     private bankService: BankService,
-    private router: Router,
     public formBuilder: FormBuilder) { }
 
     // selectBank
