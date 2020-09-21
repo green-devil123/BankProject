@@ -113,7 +113,10 @@ export class MainPageComponent implements OnInit {
   }
 
   bankServicesData(){
-    this.bankData =  this.bankService.getBankServiceData();
+    let data = this.bankService.getBankServiceData();;
+    if(data && data!=null && typeof(data) !== "undefined"){
+      this.bankData =  data;
+    }
   }
 
   delete(id){
