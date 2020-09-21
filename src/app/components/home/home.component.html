@@ -1,0 +1,25 @@
+<div class="container-fluid h-100">
+    <div class="row h-100">
+        <aside class="col-12 col-md-2 p-0 bg-primary">
+            <nav class="navbar navbar-expand navbar-dark bg-primary flex-md-column flex-row align-items-start mt-5">
+                <div class="collapse navbar-collapse">
+                    <ul class="flex-md-column flex-row navbar-nav w-100 justify-content-between">
+                        <li class="nav-item">
+                            <p class="nav-link pl-0 text-white">AIR Index</p>
+                        </li>
+                        <li class="nav-item">
+                            <p class="nav-link pl-0 text-white">Bank IFSC</p>
+                        </li>
+                        <li class="nav-item">
+                            <p class="nav-link pl-0 text-white" role="button" (click)=logout()>Logout</p>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+        <main class="col-12 col-md-10 pl-0 pr-0">
+            <p class="bg-light float-right d-block w-100 p-3 text-right">{{userName}}</p>
+            <app-main-page></app-main-page>
+        </main>
+    </div>
+</div>

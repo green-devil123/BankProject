@@ -1,0 +1,23 @@
+<div class="global-container">
+    <form [formGroup]="loginForm" autocomplete="off" (ngSubmit)="loginUser($event)" novalidate>
+        <input type="text" name="userName" placeholder="Username" class="mt-2" formControlName="userName" [class.invalid]="!loginForm.controls.userName.valid && submitAttempt">
+        <div class="validation-errors">
+            <ng-container *ngIf="!loginForm.controls.userName.valid  && submitAttempt">
+                <div>
+                    *Please enter a valid userName.
+                </div>
+            </ng-container>
+        </div>
+    
+        <input type="password" name="password" formControlName="password" class="mt-2" [class.invalid]="!loginForm.controls.password.valid && submitAttempt">
+        <div class="validation-errors">
+            <ng-container *ngIf="!loginForm.controls.password.valid  && submitAttempt">
+                <div>
+                    *Your password needs to be at least 6 characters long..
+                </div>
+            </ng-container>
+        </div>
+        
+        <button type="submit" class="bg-warning width100pr mt-2">Login</button>
+    </form>
+</div>

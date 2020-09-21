@@ -1,0 +1,132 @@
+<div class="container">
+  <div class="row mr-0 mb-5">
+      <div class="col col-md-12">
+        <button type="button" class="btn btn-primary w-20 rounded-0 float-right" data-toggle="modal" data-target="#addBranchModal"
+        >Add Branch</button>
+      </div>
+  </div>
+  <div class="row mr-0">
+      <div class="col col-md-12">
+          <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th class="text-center">Branch Name</th>
+                  <th class="text-center">IFSC Code</th>
+                  <th class="text-center">Bank</th>
+                  <th class="text-center">District</th>
+                  <th class="text-center">State</th>
+                  <th class="text-center">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <div *ngIf="bankData && bankData.length>0;then thenBlock"></div>
+                <ng-template #thenBlock>
+                  <tr *ngFor="let data of bankData">
+                      <td class="text-center">{{data.branchName}}</td>
+                      <td class="text-center">{{data.ifscCode}}</td>
+                      <td class="text-center">{{data.bank}}</td>
+                      <td class="text-center">{{data.district}}</td>
+                      <td class="text-center">{{data.state}}</td>
+                      <td class="text-center">
+                          <button type="button" class="btn btn-danger" (click)="delete(data.id)">Delete</button>
+                      </td>
+                    </tr>
+                </ng-template>
+              </tbody>
+          </table>
+        </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="addBranchModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add Branch</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="validations_form"  (ngSubmit)="addBranch($event, validations_form.value)">
+          
+          <div class="form-group">
+            <label class="col-form-label">Branch Name:</label>
+            <input type="text" class="form-control" formControlName="branchName">
+          </div>
+          <div class="validation-errors">
+            <ng-container *ngFor="let validation of validation_messages.branchName">
+              <div class="text-danger" *ngIf="validations_form.get('branchName').hasError(validation.type) && (validations_form.get('branchName').dirty || validations_form.get('branchName').touched)">
+                * {{ validation.message }}
+              </div>
+            </ng-container>
+          </div>
+
+          <div class="form-group">
+            <label class="col-form-label">IFSC Code:</label>
+            <input type="text" class="form-control" formControlName="ifscCode">
+          </div>
+          <div class="validation-errors">
+            <ng-container *ngFor="let validation of validation_messages.ifscCode">
+              <div class="text-danger" *ngIf="validations_form.get('ifscCode').hasError(validation.type) && (validations_form.get('ifscCode').dirty || validations_form.get('ifscCode').touched)">
+                * {{ validation.message }}
+              </div>
+            </ng-container>
+          </div>
+
+          <div class="form-group">
+            <label class="col-form-label">Bank:</label>
+            <select class="form-control" formControlName="bank" (change)="onSelectBank($event.target.value)">
+               <option value="undefined">Select Bank</option>
+              <option *ngFor="let bank of banks" [Value]="bank.bank_name">{{bank.bank_name}}</option>
+            </select>
+          </div>
+          <div class="validation-errors">
+            <ng-container *ngFor="let validation of validation_messages.bank">
+              <div class="text-danger" *ngIf="validations_form.get('bank').hasError(validation.type) && (validations_form.get('bank').dirty || validations_form.get('bank').touched)">
+                * {{ validation.message }}
+              </div>
+            </ng-container>
+          </div>
+
+          <div class="form-group">
+            <label class="col-form-label">State:</label>
+            <select class="form-control" formControlName="state" (change)="onSelectState($event.target.value)">
+              <option value="undefined">Select State</option>
+              <option *ngFor="let state of states" [Value]="state.state_name">{{state.state_name}}</option>
+            </select>
+          </div>
+          <div class="validation-errors">
+            <ng-container *ngFor="let validation of validation_messages.state">
+              <div class="text-danger" *ngIf="validations_form.get('state').hasError(validation.type) && (validations_form.get('state').dirty || validations_form.get('state').touched)">
+                * {{ validation.message }}
+              </div>
+            </ng-container>
+          </div>
+
+          <div class="form-group">
+            <label class="col-form-label">District:</label>
+            <select class="form-control" formControlName="district" (change)="onSelectDistricts($event.target.value)">
+              <option value="undefined">Select District</option>
+              <option *ngFor="let district of districts" [Value]="district.district_name">{{district.district_name}}</option>
+            </select>
+          </div>
+          <div class="validation-errors">
+            <ng-container *ngFor="let validation of validation_messages.district">
+              <div class="text-danger" *ngIf="validations_form.get('district').hasError(validation.type) && (validations_form.get('district').dirty || validations_form.get('district').touched)">
+                * {{ validation.message }}
+              </div>
+            </ng-container>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

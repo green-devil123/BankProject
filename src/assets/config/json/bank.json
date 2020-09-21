@@ -1,0 +1,352 @@
+{
+    "BankData":[
+        {
+            "id":1,
+            "bank_name":"State Bank of India",
+            "state":[
+                {
+                    "state_name":"Haryana",
+                    "district":[
+                        {
+                            "district_name" : "Gurgaon",
+                            "branch":["Airtal Payment Branch"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id":2,
+            "bank_name":"Punjab National Bank",
+            "state":[
+                {
+                    "state_name":"Andhra Pradesh",
+                    "district":[
+                        {
+                            "district_name" : "Hyderabad",
+                            "branch":["Banjara Hills","DD colony, Buddupal"]
+                        },
+                        {
+                            "district_name" : "Karimnagar",
+                            "branch":["Karimnagar"]
+                        },
+                        {
+                            "district_name" : "Krishna",
+                            "branch":["Vijaywada","Vuyyurru","Machlipatnam"]
+                        },
+                        {
+                            "district_name" : "Kurnool",
+                            "branch":["Kurnool","Nandyal"]
+                        }
+                    ]
+                },
+                {
+                    "state_name":"Arunachal Pradesh",
+                    "district":[
+                        {
+                            "district_name" : "Papumpare",
+                            "branch":["Itanagar"]
+                        }
+                    ]
+                },
+                {
+                    "state_name":"Bihar",
+                    "district":[
+                        {
+                            "district_name" : "Bhagalpur",
+                            "branch":["subhash Park","HAthiyari","kodanhalli"]
+                        },
+                        {
+                            "district_name" : "Naugachia",
+                            "branch":["samuel Park","FSR road"]
+                        },
+                        {
+                            "district_name" : "Araria",
+                            "branch":["Baakra","Matiyari"]
+                        },
+                        {
+                            "district_name" : "Arwal",
+                            "branch":["Mandawa","Sultan Ganj","YSR road"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id":3,
+            "bank_name":"Bank Of Baroda",
+            "state":[
+                {
+                    "state_name":"Andhra Pradesh",
+                    "district":[
+                        {
+                            "district_name" : "Vizag",
+                            "branch":["subhash Park","YSR road","kodanhalli"]
+                        },
+                        {
+                            "district_name" : "Visakhapatnam",
+                            "branch":["samuel Park","FSR road"]
+                        },
+                        {
+                            "district_name" : "Srikakulam",
+                            "branch":["HSR Layout"]
+                        },
+                        {
+                            "district_name" : "Vizianagaram",
+                            "branch":["Mandawa","Sultan Ganj"]
+                        }
+                    ]
+                },
+                {
+                    "state_name":"Arunachal Pradesh",
+                    "district":[
+                        {
+                            "district_name" : "Tawang",
+                            "branch":["subhash Park","YSR road","kodanhalli"]
+                        },
+                        {
+                            "district_name" : "West Kameng",
+                            "branch":["samuel Park","FSR road"]
+                        },
+                        {
+                            "district_name" : "East Kameng",
+                            "branch":["HSR Layout","YSR road"]
+                        },
+                        {
+                            "district_name" : "Pakke-Kessang",
+                            "branch":["Mandawa","Sultan Ganj","YSR road"]
+                        }
+                    ]
+                },
+                {
+                    "state_name":"Bihar",
+                    "district":[
+                        {
+                            "district_name" : "Bhagalpur",
+                            "branch":["subhash Park","YSR road","kodanhalli"]
+                        },
+                        {
+                            "district_name" : "Naugachia",
+                            "branch":["samuel Park","FSR road"]
+                        },
+                        {
+                            "district_name" : "Araria",
+                            "branch":["HSR Layout","YSR road"]
+                        },
+                        {
+                            "district_name" : "Arwal",
+                            "branch":["Mandawa","Sultan Ganj","YSR road"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id":4,
+            "bank_name":"HDFC",
+            "state":[
+                {
+                    "state_name":"Andhra Pradesh",
+                    "district":[
+                        {
+                            "district_name" : "Vizag",
+                            "branch":["subhash Park","YSR road","kodanhalli"]
+                        },
+                        {
+                            "district_name" : "Visakhapatnam",
+                            "branch":["samuel Park","FSR road"]
+                        },
+                        {
+                            "district_name" : "Srikakulam",
+                            "branch":["HSR Layout"]
+                        },
+                        {
+                            "district_name" : "Vizianagaram",
+                            "branch":["Mandawa","Sultan Ganj"]
+                        }
+                    ]
+                },
+                {
+                    "state_name":"Arunachal Pradesh",
+                    "district":[
+                        {
+                            "district_name" : "Tawang",
+                            "branch":["subhash Park","YSR road","kodanhalli"]
+                        },
+                        {
+                            "district_name" : "West Kameng",
+                            "branch":["samuel Park","FSR road"]
+                        },
+                        {
+                            "district_name" : "East Kameng",
+                            "branch":["HSR Layout","YSR road"]
+                        },
+                        {
+                            "district_name" : "Pakke-Kessang",
+                            "branch":["Mandawa","Sultan Ganj","YSR road"]
+                        }
+                    ]
+                },
+                {
+                    "state_name":"Bihar",
+                    "district":[
+                        {
+                            "district_name" : "Bhagalpur",
+                            "branch":["subhash Park","YSR road","kodanhalli"]
+                        },
+                        {
+                            "district_name" : "Naugachia",
+                            "branch":["samuel Park","FSR road"]
+                        },
+                        {
+                            "district_name" : "Araria",
+                            "branch":["HSR Layout","YSR road"]
+                        },
+                        {
+                            "district_name" : "Arwal",
+                            "branch":["Mandawa","Sultan Ganj","YSR road"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id":5,
+            "bank_name":"Union Bank",
+            "state":[
+                {
+                    "state_name":"Andhra Pradesh",
+                    "district":[
+                        {
+                            "district_name" : "Vizag",
+                            "branch":["subhash Park","YSR road","kodanhalli"]
+                        },
+                        {
+                            "district_name" : "Visakhapatnam",
+                            "branch":["samuel Park","FSR road"]
+                        },
+                        {
+                            "district_name" : "Srikakulam",
+                            "branch":["HSR Layout"]
+                        },
+                        {
+                            "district_name" : "Vizianagaram",
+                            "branch":["Mandawa","Sultan Ganj"]
+                        }
+                    ]
+                },
+                {
+                    "state_name":"Arunachal Pradesh",
+                    "district":[
+                        {
+                            "district_name" : "Tawang",
+                            "branch":["subhash Park","YSR road","kodanhalli"]
+                        },
+                        {
+                            "district_name" : "West Kameng",
+                            "branch":["samuel Park","FSR road"]
+                        },
+                        {
+                            "district_name" : "East Kameng",
+                            "branch":["HSR Layout","YSR road"]
+                        },
+                        {
+                            "district_name" : "Pakke-Kessang",
+                            "branch":["Mandawa","Sultan Ganj","YSR road"]
+                        }
+                    ]
+                },
+                {
+                    "state_name":"Bihar",
+                    "district":[
+                        {
+                            "district_name" : "Bhagalpur",
+                            "branch":["subhash Park","YSR road","kodanhalli"]
+                        },
+                        {
+                            "district_name" : "Naugachia",
+                            "branch":["samuel Park","FSR road"]
+                        },
+                        {
+                            "district_name" : "Araria",
+                            "branch":["HSR Layout","YSR road"]
+                        },
+                        {
+                            "district_name" : "Arwal",
+                            "branch":["Mandawa","Sultan Ganj","YSR road"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id":6,
+            "bank_name":"ICICI",
+            "state":[
+                {
+                    "state_name":"Andhra Pradesh",
+                    "district":[
+                        {
+                            "district_name" : "Vizag",
+                            "branch":["subhash Park","YSR road","kodanhalli"]
+                        },
+                        {
+                            "district_name" : "Visakhapatnam",
+                            "branch":["samuel Park","FSR road"]
+                        },
+                        {
+                            "district_name" : "Srikakulam",
+                            "branch":["HSR Layout"]
+                        },
+                        {
+                            "district_name" : "Vizianagaram",
+                            "branch":["Mandawa","Sultan Ganj"]
+                        }
+                    ]
+                },
+                {
+                    "state_name":"Arunachal Pradesh",
+                    "district":[
+                        {
+                            "district_name" : "Tawang",
+                            "branch":["subhash Park","YSR road","kodanhalli"]
+                        },
+                        {
+                            "district_name" : "West Kameng",
+                            "branch":["samuel Park","FSR road"]
+                        },
+                        {
+                            "district_name" : "East Kameng",
+                            "branch":["HSR Layout","YSR road"]
+                        },
+                        {
+                            "district_name" : "Pakke-Kessang",
+                            "branch":["Mandawa","Sultan Ganj","YSR road"]
+                        }
+                    ]
+                },
+                {
+                    "state_name":"Bihar",
+                    "district":[
+                        {
+                            "district_name" : "Bhagalpur",
+                            "branch":["subhash Park","YSR road","kodanhalli"]
+                        },
+                        {
+                            "district_name" : "Naugachia",
+                            "branch":["samuel Park","FSR road"]
+                        },
+                        {
+                            "district_name" : "Araria",
+                            "branch":["HSR Layout","YSR road"]
+                        },
+                        {
+                            "district_name" : "Arwal",
+                            "branch":["Mandawa","Sultan Ganj","YSR road"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

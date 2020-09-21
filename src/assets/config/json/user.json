@@ -1,0 +1,39 @@
+{
+    "User":[ 
+        {
+            "id":1,
+            "userName": "tarun",
+            "name":"Tarun Agarwal",
+            "email":"agarwal.tarun90@gmail.com",
+            "password": "qwerty123"
+        },
+        {
+            "id":2,
+            "userName": "piyush",
+            "name":"Piyush Agarwal",
+            "email":"agarwal.piyush@gmail.com",
+            "password": "qwerty123"
+        },
+        {
+            "id":3,
+            "userName": "anup",
+            "name":"Anup Agarwal",
+            "email":"agarwal.anup@gmail.com",
+            "password": "qwerty123"
+        },
+        {
+            "id":4,
+            "userName": "shivam",
+            "name":"shivam Agarwal",
+            "email":"agarwal.shivam@gmail.com",
+            "password": "qwerty123"
+        },
+        {
+            "id":5,
+            "userName": "katyayani",
+            "name":"katyayani Wadhawan",
+            "email":"wadhawan.katyayani@gmail.com",
+            "password": "qwerty123"
+        }     
+    ]
+}
