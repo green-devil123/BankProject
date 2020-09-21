@@ -113,7 +113,10 @@ export class MainPageComponent implements OnInit {
   }
 
   bankServicesData(){
-    this.bankData =  this.bankService.getBankServiceData();
+    let getData =  this.bankService.getBankServiceData();
+    if(getData && getData != null && getData !== "undefined"){
+      this.bankData = getData;
+    }
   }
 
   delete(id){
@@ -141,7 +144,4 @@ export class MainPageComponent implements OnInit {
     });
     self.bankServicesData();
   }
-
-
-
 }
